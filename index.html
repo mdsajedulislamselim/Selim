@@ -36,9 +36,21 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             border: 3px solid #ffcc00; 
             text-align: center;
-            padding: 45px 25px 35px 25px;
+            /* কভার ফটোর নিচে প্যাডিং অ্যাডজাস্ট করার জন্য ভেতরের টপ প্যাডিং কমানো হয়েছে */
+            padding: 0px 25px 35px 25px; 
             overflow: hidden;
         }
+        
+        /* 🟢 NEW: সুন্দর ফেসবুক স্টাইলের কভার ফটো সেকশন */
+        .fb-cover-pic {
+            width: calc(100% + 50px); /* কন্টেইনারের বর্ডারের সাথে মেলানোর জন্য */
+            margin-left: -25px; /* প্যাডিং ওভাররাইড করার জন্য */
+            height: 160px;
+            background: linear-gradient(to bottom, rgba(255,204,0,0.2), rgba(26, 38, 78, 1)), url('https://unsplash.com') center/cover no-repeat;
+            border-bottom: 2px solid #ffcc00;
+            margin-bottom: -60px; /* প্রোফাইল পিকচারটি কভারের ওপর অর্ধেক ভাসিয়ে রাখার জন্য */
+        }
+
         /* ফেসবুক লাইভ প্রোফাইল ছবির সুন্দর গোল স্টাইল */
         .fb-profile-pic {
             width: 120px;
@@ -50,6 +62,8 @@
             margin: 0 auto 20px auto;
             display: block;
             background-color: #1a264e;
+            position: relative; /* কভার ফটোর ওপরে দেখানোর জন্য */
+            z-index: 2;
         }
         h1 {
             font-size: 22px;
@@ -129,21 +143,8 @@
             color: #1a264e;
             transform: translateY(-2px);
         }
-        .facebook-gallery {
-            width: 100%;
-            background: rgba(26, 38, 78, 0.8);
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .gallery-title {
-            font-size: 18px;
-            color: #ffcc00;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        /* 🟢 ADDED: Fade-Up Animation CSS */
+        
+        /* স্ক্রোল অ্যানিমেশনের জন্য CSS */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
@@ -159,9 +160,13 @@
 
     <div class="main-wrapper">
 
-        <!-- প্রোফাইল কার্ড (fade-up ক্লাস যুক্ত করা হয়েছে) -->
+        <!-- প্রোফাইল কার্ড সেকশন -->
         <div class="card-container fade-up">
-            <!-- 🔴 ডাইনামিক লাইভ ইমেজ লিংক যা আপনার ফেসবুক প্রোফাইল বদলালে অটো পরিবর্তন হবে -->
+            
+            <!-- 🟢 NEW: কভার ফটো ডিভ এলিমেন্ট যোগ করা হয়েছে -->
+            <div class="fb-cover-pic"></div>
+            
+            <!-- প্রোফাইল পিকচার -->
             <img src="https://weserv.nl" alt="MD SAJEDUL ISLAM SELIM" class="fb-profile-pic">
             
             <h1>MD SAJEDUL ISLAM SELIM</h1>
@@ -188,15 +193,9 @@
             </div>
         </div>
 
-        <!-- ফেসবুক ছবির গ্যালারি কন্টেইনার (fade-up ক্লাস যুক্ত করা হয়েছে) -->
-        <div class="facebook-gallery fade-up">
-            <div class="gallery-title">My Facebook Photos</div>
-            <p style="text-align:center; color:#cbd5e1; font-size:14px;">Connect Elfsight Widget here to show live photos.</p>
-        </div>
-
     </div>
 
-    <!-- 🟢 ADDED: Scroll Tracking JavaScript -->
+    <!-- স্ক্রোল ট্র্যাকিং জাভাস্ক্রিপ্ট -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const observer = new IntersectionObserver((entries) => {
@@ -206,7 +205,7 @@
                     }
                 });
             }, {
-                threshold: 0.1 /* এলিমেন্ট ১০% স্ক্রিনে আসলেই অ্যানিমেশন স্টার্ট হবে */
+                threshold: 0.1
             });
 
             document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
@@ -216,16 +215,15 @@
 </body>
 </html>
 <!-- Elfsight Facebook Feed | Untitled Facebook Feed -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
+<script src="https://elfsightcdn.com" async></script>
 <div class="elfsight-app-48f51bfb-4a00-447c-a604-4c17647a4310" data-elfsight-app-lazy></div>
 <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<script src="https://elfsightcdn.com/platform.js" async></script>
+<script src="https://elfsightcdn.com" async></script>
+<script src="https://elfsightcdn.com" async></script>
 <div class="elfsight-app-76d3f2af-3971-45a6-9320-3006c09cded2" data-elfsight-app-lazy></div>
 <!-- Elfsight QR Code | Untitled QR Code -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
+<script src="https://elfsightcdn.com" async></script>
 <div class="elfsight-app-43893d02-b572-4f24-9a84-4d8cc7f7ae04" data-elfsight-app-lazy></div>
 <!-- Elfsight Banner | Untitled Banner -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
+<script src="https://elfsightcdn.com" async></script>
 <div class="elfsight-app-3a5917bc-f6b5-43f6-9c2a-4909c67c19ce" data-elfsight-app-lazy></div>
-<!-- Elfsight Banner | Untitled Banner -->
