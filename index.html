@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD SAJEDUL ISLAM SELIM | Digital Marketing Expert</title>
+    <!-- সোশ্যাল মিডিয়া আইকনের জন্য FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
     <style>
         * {
             margin: 0;
@@ -27,7 +30,7 @@
             display: flex;
             flex-direction: column;
             align-items: center; 
-            gap: 30px;
+            gap: 25px;
         }
         .card-container {
             background: #1a264e;
@@ -36,19 +39,18 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             border: 3px solid #ffcc00; 
             text-align: center;
-            /* কভার ফটোর নিচে প্যাডিং অ্যাডজাস্ট করার জন্য ভেতরের টপ প্যাডিং কমানো হয়েছে */
-            padding: 0px 25px 35px 25px; 
+            padding: 0px 25px 35px 25px;
             overflow: hidden;
         }
         
-        /* 🟢 NEW: সুন্দর ফেসবুক স্টাইলের কভার ফটো সেকশন */
+        /* ফেসবুক স্টাইলের কভার ফটো সেকশন */
         .fb-cover-pic {
-            width: calc(100% + 50px); /* কন্টেইনারের বর্ডারের সাথে মেলানোর জন্য */
-            margin-left: -25px; /* প্যাডিং ওভাররাইড করার জন্য */
+            width: calc(100% + 50px);
+            margin-left: -25px;
             height: 160px;
-            background: linear-gradient(to bottom, rgba(255,204,0,0.2), rgba(26, 38, 78, 1)), url('https://unsplash.com') center/cover no-repeat;
+            background: linear-gradient(to bottom, rgba(255,204,0,0.1), rgba(26, 38, 78, 1)), url('https://unsplash.com') center/cover no-repeat;
             border-bottom: 2px solid #ffcc00;
-            margin-bottom: -60px; /* প্রোফাইল পিকচারটি কভারের ওপর অর্ধেক ভাসিয়ে রাখার জন্য */
+            margin-bottom: -60px;
         }
 
         /* ফেসবুক লাইভ প্রোফাইল ছবির সুন্দর গোল স্টাইল */
@@ -62,7 +64,7 @@
             margin: 0 auto 20px auto;
             display: block;
             background-color: #1a264e;
-            position: relative; /* কভার ফটোর ওপরে দেখানোর জন্য */
+            position: relative;
             z-index: 2;
         }
         h1 {
@@ -72,17 +74,79 @@
             font-weight: 700;
             letter-spacing: 0.5px;
         }
-        .designation {
+        
+        /* ডাইনামিক টাইপিং টেক্সটের স্টাইল */
+        .designation-container {
             font-size: 14px;
             color: #ffcc00;
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
+            height: 20px;
         }
+        
+        /* সোশ্যাল আইকন গ্রিড স্টাইল (৮টি লিঙ্কের জন্য সুন্দর বিন্যাস) */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+        .social-icons a {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .social-icons a:hover {
+            background: #ffcc00;
+            color: #1a264e;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        /* স্কিল ব্যাজ স্টাইল */
+        .skills-section {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .skills-title {
+            font-size: 13px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.06);
+            color: #cbd5e1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
         .info-box {
             text-align: left;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             background: rgba(255, 255, 255, 0.04);
             padding: 20px;
             border-radius: 16px;
@@ -144,7 +208,7 @@
             transform: translateY(-2px);
         }
         
-        /* স্ক্রোল অ্যানিমেশনের জন্য CSS */
+        /* স্ক্রোল অ্যানিমেশন CSS */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
@@ -163,15 +227,44 @@
         <!-- প্রোফাইল কার্ড সেকশন -->
         <div class="card-container fade-up">
             
-            <!-- 🟢 NEW: কভার ফটো ডিভ এলিমেন্ট যোগ করা হয়েছে -->
+            <!-- কভার ফটো -->
             <div class="fb-cover-pic"></div>
             
             <!-- প্রোফাইল পিকচার -->
             <img src="https://weserv.nl" alt="MD SAJEDUL ISLAM SELIM" class="fb-profile-pic">
             
             <h1>MD SAJEDUL ISLAM SELIM</h1>
-            <div class="designation">Digital Marketing Expert</div>
             
+            <!-- টাইপিং অ্যানিমেশনের জায়গা -->
+            <div class="designation-container">
+                <span id="typing-text"></span>
+            </div>
+
+            <!-- 🔗 আপনার দেওয়া ছবির সব সোশ্যাল মিডিয়া লিংক এখানে যুক্ত করা হলো -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mdsajedulislamselim/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/sisselim80" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.pinterest.com/sisselim80/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/@MR_SELIM_SIS" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://github.com/mdsajedulislamselim" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+
+            <!-- এক্সপার্ট স্কিল ট্যাগ সমূহ -->
+            <div class="skills-section">
+                <div class="skills-title">My Expertise</div>
+                <div class="skills-container">
+                    <span class="skill-badge">SEO</span>
+                    <span class="skill-badge">Facebook Ads</span>
+                    <span class="skill-badge">Google Ads</span>
+                    <span class="skill-badge">SMM</span>
+                    <span class="skill-badge">Lead Generation</span>
+                </div>
+            </div>
+            
+            <!-- ইনফরমেশন বক্স -->
             <div class="info-box">
                 <div class="info-row">
                     <strong>📞 Phone:</strong> 
@@ -187,43 +280,8 @@
                 </div>
             </div>
             
+            <!-- মেইন অ্যাকশন বাটন -->
             <div class="btn-group">
                 <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
                 <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
             </div>
-        </div>
-
-    </div>
-
-    <!-- স্ক্রোল ট্র্যাকিং জাভাস্ক্রিপ্ট -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
-        });
-    </script>
-
-</body>
-</html>
-<!-- Elfsight Facebook Feed | Untitled Facebook Feed -->
-<script src="https://elfsightcdn.com" async></script>
-<div class="elfsight-app-48f51bfb-4a00-447c-a604-4c17647a4310" data-elfsight-app-lazy></div>
-<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
-<script src="https://elfsightcdn.com" async></script>
-<script src="https://elfsightcdn.com" async></script>
-<div class="elfsight-app-76d3f2af-3971-45a6-9320-3006c09cded2" data-elfsight-app-lazy></div>
-<!-- Elfsight QR Code | Untitled QR Code -->
-<script src="https://elfsightcdn.com" async></script>
-<div class="elfsight-app-43893d02-b572-4f24-9a84-4d8cc7f7ae04" data-elfsight-app-lazy></div>
-<!-- Elfsight Banner | Untitled Banner -->
-<script src="https://elfsightcdn.com" async></script>
-<div class="elfsight-app-3a5917bc-f6b5-43f6-9c2a-4909c67c19ce" data-elfsight-app-lazy></div>
