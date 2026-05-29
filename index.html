@@ -9,10 +9,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #1e2d5a; /* আপনার বিজনেস কার্ডের সুন্দর গাঢ় নীল ব্যাকগ্রাউন্ড */
+            background: linear-gradient(135deg, #0f172a 0%, #1e2d5a 50%, #111827 100%);
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -22,103 +22,98 @@
         }
         .card-container {
             background: #1a264e;
-            max-width: 450px;
+            max-width: 430px;
             width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-            overflow: hidden;
-            border: 4px solid #ffcc00; /* সোনালী হলুদ বর্ডার */
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 3px solid #ffcc00; /* গোল্ডেন হলুদ বর্ডার */
             text-align: center;
-            padding: 40px 30px;
-        }
-        .profile-img-container {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-            border-radius: 50%;
-            border: 5px solid #ffcc00;
+            padding: 35px 25px;
             overflow: hidden;
-            background-color: #ffcc00;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-        .profile-img-container img {
+        .profile-card-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            border-radius: 14px;
+            border: 2px solid rgba(255, 204, 0, 0.5);
+            margin-bottom: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
         h1 {
-            font-size: 24px;
+            font-size: 22px;
             color: #ffffff;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         .designation {
-            font-size: 16px;
-            color: #ffcc00; /* সোনালী হলুদ কালার */
+            font-size: 14px;
+            color: #ffcc00;
             font-weight: 600;
             margin-bottom: 25px;
             text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
-        .info-section {
+        .info-box {
             text-align: left;
             margin-bottom: 30px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .info-item {
+        .info-row {
             margin-bottom: 12px;
-            font-size: 15px;
-            color: #e0e0e0;
+            font-size: 14px;
+            color: #cbd5e1;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
-        .info-item strong {
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        .info-row strong {
             color: #ffcc00;
-            margin-right: 8px;
-            min-width: 80px;
+            width: 85px;
+            flex-shrink: 0;
         }
-        .info-item a {
+        .info-row a {
             color: #ffffff;
             text-decoration: none;
         }
-        .info-item a:hover {
-            text-decoration: underline;
+        .info-row a:hover {
             color: #ffcc00;
+            text-decoration: underline;
         }
-        .btn-container {
+        .btn-group {
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
-        .btn {
+        .action-btn {
             flex: 1;
-            padding: 12px;
+            padding: 14px;
             text-decoration: none;
             border-radius: 25px;
-            font-weight: bold;
-            font-size: 15px;
-            transition: 0.3s;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
             text-align: center;
         }
-        .btn-facebook {
-            background-color: #ffcc00;
-            color: #1e2d5a;
+        .btn-fb {
+            background: #ffcc00;
+            color: #1a264e;
         }
-        .btn-facebook:hover {
-            background-color: #e6b800;
+        .btn-fb:hover {
+            background: #ffe066;
             transform: translateY(-2px);
         }
-        .btn-email {
-            background-color: transparent;
+        .btn-hire {
+            background: transparent;
             color: #ffffff;
             border: 2px solid #ffffff;
         }
-        .btn-email:hover {
-            background-color: #ffffff;
-            color: #1e2d5a;
+        .btn-hire:hover {
+            background: #ffffff;
+            color: #1a264e;
             transform: translateY(-2px);
         }
     </style>
@@ -126,35 +121,32 @@
 <body>
 
     <div class="card-container">
-        <!-- প্রোফাইল ছবি সেকশন -->
-        <div class="profile-img-container">
-            <!-- আপনি যদি ছবি আপলোড করেন, তবে সেটির নাম এখানে দিতে হবে (যেমন: profil.png) -->
-            <img src="https://placeholder.com" alt="MD SAJEDUL ISLAM SELIM">
-        </div>
+        <!-- আপনার পাঠানো আসল কার্ডের অনলাইন ইমেজ লিংকটি নিচে যুক্ত করা হয়েছে -->
+        <img src="https://imgbox.com" alt="MD SAJEDUL ISLAM SELIM" class="profile-card-img">
         
         <h1>MD SAJEDUL ISLAM SELIM</h1>
         <div class="designation">Digital Marketing Expert</div>
         
-        <!-- যোগাযোগের তথ্য -->
-        <div class="info-section">
-            <div class="info-item">
-                <strong>📞 Phone:</strong> <a href="tel:+8801644924825">+8801644924825</a>
+        <div class="info-box">
+            <div class="info-row">
+                <strong>📞 Phone:</strong> 
+                <a href="tel:+8801644924825">+8801644924825</a>
             </div>
-            <div class="info-item">
-                <strong>✉️ Email:</strong> <a href="mailto:mdsajedulislamselim@gmail.com">mdsajedulislamselim@gmail.com</a>
+            <div class="info-row">
+                <strong>✉️ Email:</strong> 
+                <a href="mailto:mdsajedulislamselim@gmail.com">mdsajedulislamselim@gmail.com</a>
             </div>
-            <div class="info-item">
-                <strong>📍 Address:</strong> Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh
+            <div class="info-row">
+                <strong>📍 Address:</strong> 
+                <span>Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh</span>
             </div>
         </div>
         
-        <!-- আপনার লাইভ ফেসবুক বাটন -->
-        <div class="btn-container">
-            <a href="https://facebook.com" target="_blank" class="btn btn-facebook">Facebook Profile</a>
-            <a href="mailto:mdsajedulislamselim@gmail.com" class="btn btn-email">Hire Me</a>
+        <div class="btn-group">
+            <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
+            <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
         </div>
     </div>
-<img src="file:///D:/Horipur%20pic/Quick%20Share/LMC_20250608_183841_%F0%9F%8C%88Color%20Boost%20Pro%20By%20Expert%20Mistry.jpg" alt="MD SAJEDUL ISLAM SELIM">
 
 </body>
 </html>
