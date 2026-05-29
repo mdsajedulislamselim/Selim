@@ -4,50 +4,274 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD SAJEDUL ISLAM SELIM | Digital Marketing Expert</title>
+    
+    <!-- 🟢 FIXED: FontAwesome আইকনের একদম সঠিক এবং নির্ভরযোগ্য সিডিএন লিংক -->
     <link rel="stylesheet" href="https://cloudflare.com" />
+    
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background: linear-gradient(135deg, #0f172a 0%, #1e2d5a 50%, #111827 100%); color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; padding: 40px 20px; }
-        .main-wrapper { max-width: 450px; width: 100%; }
-        .card-container { background: #1a264e; width: 100%; border-radius: 24px; box-shadow: 0 0 20px rgba(255, 204, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.6); border: 3px solid #ffcc00; text-align: center; padding: 25px; overflow: hidden; }
-        .fb-cover-pic { width: 100%; height: 160px; background: #10172e url('card.jpg') center/cover no-repeat; border-radius: 16px; margin-bottom: 20px; border: 1px solid rgba(255, 254, 0, 0.3); }
-        .fb-pic-container { width: 110px; height: 110px; border-radius: 50%; border: 4px solid #ffcc00; box-shadow: 0 8px 16px rgba(0,0,0,0.4); margin: -70px auto 15px auto; overflow: hidden; background-color: #1a264e; position: relative; z-index: 5; display: flex; align-items: center; justify-content: center; }
-        .fb-pic-container img { width: 100%; height: 100%; object-fit: cover; }
-        h1 { font-size: 22px; color: #ffffff; margin-bottom: 6px; font-weight: 700; letter-spacing: 0.5px; }
-        .designation-container { font-size: 14px; color: #ffcc00; font-weight: 600; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1.5px; height: 20px; }
-        .social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 25px; }
-        .social-icons a { color: #ffffff; background: rgba(255, 255, 255, 0.08); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; text-decoration: none; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); }
-        .social-icons a:hover { background: #ffcc00; color: #1a264e; transform: translateY(-3px); }
-        .skills-section { margin-bottom: 25px; text-align: left; }
-        .skills-title { font-size: 13px; color: #ffcc00; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: bold; }
-        .skills-container { display: flex; flex-wrap: wrap; gap: 8px; }
-        .skill-badge { background: rgba(255, 255, 255, 0.06); color: #cbd5e1; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .info-box { text-align: left; margin-bottom: 25px; background: rgba(255, 255, 255, 0.04); padding: 20px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .info-row { margin-bottom: 12px; font-size: 14px; color: #ffffff !important; display: flex !important; align-items: flex-start; cursor: pointer; }
-        .info-row:last-child { margin-bottom: 0; cursor: default; }
-        .info-row strong { color: #ffcc00; width: 85px; flex-shrink: 0; display: inline-block; }
-        .info-row span.val { color: #ffffff !important; display: inline-block; }
-        .copy-toast { position: fixed; bottom: 30px; background: #ffcc00; color: #1a264e; padding: 10px 20px; border-radius: 30px; font-weight: bold; font-size: 14px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); display: none; z-index: 999; }
-        .btn-group { display: flex; gap: 12px; }
-        .action-btn { flex: 1; padding: 14px; text-decoration: none; border-radius: 25px; font-weight: 700; font-size: 14px; transition: all 0.3s ease; text-align: center; }
-        .btn-fb { background: #ffcc00; color: #1a264e; }
-        .btn-fb:hover { background: #ffe066; }
-        .btn-hire { background: transparent; color: #ffffff; border: 2px solid #ffffff; }
-        .btn-hire:hover { background: #ffffff; color: #1a264e; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #fff; border-radius: 50%; text-align: center; width: 55px; height: 55px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 28px; z-index: 100; text-decoration: none; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2d5a 50%, #111827 100%);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .main-wrapper {
+            max-width: 450px;
+            width: 100%;
+        }
+        
+        /* কার্ড কন্টেইনার */
+        .card-container {
+            background: #1a264e;
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.6);
+            border: 3px solid #ffcc00; 
+            text-align: center;
+            padding: 25px;
+            overflow: hidden;
+        }
+        
+        /* কভার ফটো ব্যানার */
+        .fb-cover-pic {
+            width: 100%;
+            height: 160px;
+            background: #10172e url('card.jpg') center/cover no-repeat;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 254, 0, 0.3);
+        }
+
+        /* প্রোফাইল পিকচার ফ্রেম */
+        .fb-pic-container {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #ffcc00;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            margin: -70px auto 15px auto;
+            overflow: hidden;
+            background-color: #1a264e;
+            position: relative;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .fb-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* নাম ও টাইটেল */
+        h1 {
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 6px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        /* টাইপিং টেক্সট কন্টেইনার */
+        .designation-container {
+            font-size: 14px;
+            color: #ffcc00;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            height: 20px;
+        }
+        
+        /* সোশ্যাল আইকন */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .social-icons a {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .social-icons a:hover {
+            background: #ffcc00;
+            color: #1a264e;
+            transform: translateY(-3px);
+        }
+
+        /* স্কিল ব্যাজ */
+        .skills-section {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .skills-title {
+            font-size: 13px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.06);
+            color: #cbd5e1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* কন্টাক্ট ইনফরমেশন বক্স */
+        .info-box {
+            text-align: left;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .info-row {
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #ffffff !important;
+            display: flex !important;
+            align-items: flex-start;
+            cursor: pointer;
+        }
+        .info-row:last-child {
+            margin-bottom: 0;
+            cursor: default;
+        }
+        .info-row strong {
+            color: #ffcc00;
+            width: 85px;
+            flex-shrink: 0;
+            display: inline-block;
+        }
+        .info-row span.val {
+            color: #ffffff !important;
+            display: inline-block;
+        }
+        
+        /* কপি নোটিফিকেশন অ্যালার্ট */
+        .copy-toast {
+            position: fixed;
+            bottom: 30px;
+            background: #ffcc00;
+            color: #1a264e;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 999;
+        }
+
+        /* বাটন গ্রুপ */
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+        .action-btn {
+            flex: 1;
+            padding: 14px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .btn-fb {
+            background: #ffcc00;
+            color: #1a264e;
+        }
+        .btn-fb:hover {
+            background: #ffe066;
+        }
+        .btn-hire {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+        .btn-hire:hover {
+            background: #ffffff;
+            color: #1a264e;
+        }
+        
+        /* ফ্লোটিং হোয়াটসঅ্যাপ বাটন */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            width: 55px;
+            height: 55px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 100;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+
     <div class="main-wrapper">
         <div class="card-container">
+            <!-- কভার ফটো সেকশন -->
             <div class="fb-cover-pic"></div>
+            
+            <!-- গোল প্রোফাইল পিকচার -->
             <div class="fb-pic-container">
                 <img src="my-pic.jpg" alt="MD SAJEDUL ISLAM SELIM">
             </div>
+            
+            <!-- নাম ও ডেজিগনেশন -->
             <h1>MD SAJEDUL ISLAM SELIM</h1>
+            
+            <!-- টাইপিং অ্যানিমেশনের জায়গা -->
             <div class="designation-container">
                 <span id="typing-text"></span>
             </div>
+
+            <!-- সোশ্যাল মিডিয়া লিঙ্ক সমূহ -->
             <div class="social-icons">
                 <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -59,6 +283,8 @@
                 <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
                 <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
+
+            <!-- এক্সপার্ট স্কিল ট্যাগ সমূহ -->
             <div class="skills-section">
                 <div class="skills-title">My Expertise</div>
                 <div class="skills-container">
@@ -69,55 +295,8 @@
                     <span class="skill-badge">Lead Generation</span>
                 </div>
             </div>
+            
+            <!-- কন্টাক্ট ইনফরমেশন BOX -->
             <div class="info-box">
                 <div class="info-row" onclick="copyToClipboard('+8801644924825', 'Phone Number copied!')">
-                    <strong>📞 Phone:</strong><span class="val">+8801644924825</span>
-                </div>
-                <div class="info-row" onclick="copyToClipboard('mdsajedulislamselim@gmail.com', 'Email Address copied!')">
-                    <strong>✉️ Email:</strong><span class="val">mdsajedulislamselim@gmail.com</span>
-                </div>
-                <div class="info-row">
-                    <strong>📍 Address:</strong><span class="val">Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh</span>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
-                <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
-            </div>
-        </div>
-    </div>
-    <a href="https://wa.me" class="whatsapp-float" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <div id="toast" class="copy-toast">Copied!</div>
-    <script>
-        const words = ["Digital Marketing Expert", "SEO Specialist", "Social Media Manager", "Google Ads Expert"];
-        let wordIndex = 0, charIndex = 0, isDeleting = false;
-        function type() {
-            const currentWord = words[wordIndex];
-            const textContainer = document.getElementById('typing-text');
-            if (!textContainer) return;
-            if (isDeleting) {
-                textContainer.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                textContainer.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            let typeSpeed = 100;
-            if (isDeleting) typeSpeed /= 2;
-            if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000; isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false; wordIndex = (wordIndex + 1) % words.length; typeSpeed = 500;
-            }
-            setTimeout(type, typeSpeed);
-        }
-        window.onload = function() { type(); };
-        function copyToClipboard(text, msg) {
-            navigator.clipboard.writeText(text).then(() => {
-                let toast = document.getElementById('toast');
-                if(toast) { toast.innerHTML = msg; toast.style.display = 'block'; setTimeout(() => { toast.style.display = 'none'; }, 2000); }
-            });
-        }
-    </script>
-</body>
-</html>
+                    <strong>📞 Phone:</strong> 
