@@ -142,14 +142,25 @@
             margin-bottom: 15px;
             text-align: center;
         }
+
+        /* 🟢 ADDED: Fade-Up Animation CSS */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
 
     <div class="main-wrapper">
 
-        <!-- প্রোফাইল কার্ড -->
-        <div class="card-container">
+        <!-- প্রোফাইল কার্ড (fade-up ক্লাস যুক্ত করা হয়েছে) -->
+        <div class="card-container fade-up">
             <!-- 🔴 ডাইনামিক লাইভ ইমেজ লিংক যা আপনার ফেসবুক প্রোফাইল বদলালে অটো পরিবর্তন হবে -->
             <img src="https://weserv.nl" alt="MD SAJEDUL ISLAM SELIM" class="fb-profile-pic">
             
@@ -177,13 +188,30 @@
             </div>
         </div>
 
-        <!-- ফেসবুক ছবির গ্যালারি কন্টেইনার -->
-        <div class="facebook-gallery">
+        <!-- ফেসবুক ছবির গ্যালারি কন্টেইনার (fade-up ক্লাস যুক্ত করা হয়েছে) -->
+        <div class="facebook-gallery fade-up">
             <div class="gallery-title">My Facebook Photos</div>
             <p style="text-align:center; color:#cbd5e1; font-size:14px;">Connect Elfsight Widget here to show live photos.</p>
         </div>
 
     </div>
+
+    <!-- 🟢 ADDED: Scroll Tracking JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, {
+                threshold: 0.1 /* এলিমেন্ট ১০% স্ক্রিনে আসলেই অ্যানিমেশন স্টার্ট হবে */
+            });
+
+            document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
+        });
+    </script>
 
 </body>
 </html>
