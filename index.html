@@ -36,15 +36,20 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             border: 3px solid #ffcc00; 
             text-align: center;
-            padding: 35px 25px;
+            padding: 45px 25px 35px 25px;
             overflow: hidden;
         }
-        .profile-card-img {
-            width: 100%;
-            border-radius: 14px;
-            border: 2px solid rgba(255, 204, 0, 0.5);
-            margin-bottom: 25px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        /* ফেসবুক লাইভ প্রোফাইল ছবির সুন্দর গোল স্টাইল */
+        .fb-profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffcc00;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            margin: 0 auto 20px auto;
+            display: block;
+            background-color: #1a264e;
         }
         h1 {
             font-size: 22px;
@@ -145,7 +150,8 @@
 
         <!-- প্রোফাইল কার্ড -->
         <div class="card-container">
-            <img src="https://imgbox.com" alt="MD SAJEDUL ISLAM SELIM" class="profile-card-img">
+            <!-- 🔴 ডাইনামিক লাইভ ইমেজ লিংক যা আপনার ফেসবুক প্রোফাইল বদলালে অটো পরিবর্তন হবে -->
+            <img src="https://weserv.nl" alt="MD SAJEDUL ISLAM SELIM" class="fb-profile-pic">
             
             <h1>MD SAJEDUL ISLAM SELIM</h1>
             <div class="designation">Digital Marketing Expert</div>
@@ -166,8 +172,7 @@
             </div>
             
             <div class="btn-group">
-                <!-- 🔴 আপনার দেওয়া নতুন ফেসবুক আইডি লিংকটি এখানে সঠিকভাবে যুক্ত করা হয়েছে -->
-                <a href="https://www.facebook.com/sajedulislamselim" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
+                <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
                 <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
             </div>
         </div>
