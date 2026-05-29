@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD SAJEDUL ISLAM SELIM | Digital Marketing Expert</title>
-    <!-- সোশ্যাল মিডিয়া আইকনের জন্য FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- 🟢 FIXED: FontAwesome আইকনের সবচেয়ে নির্ভরযোগ্য নতুন CDN লিংক -->
+    <link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
         * {
@@ -23,15 +24,10 @@
             justify-content: flex-start;
             min-height: 100vh;
             padding: 40px 20px;
-            position: relative;
         }
         .main-wrapper {
             max-width: 450px;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            gap: 25px;
         }
         
         /* কার্ড কন্টেইনার */
@@ -42,23 +38,17 @@
             box-shadow: 0 0 20px rgba(255, 204, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.6);
             border: 3px solid #ffcc00; 
             text-align: center;
-            padding: 0px 25px 35px 25px;
+            padding: 25px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.4), 0 25px 50px rgba(0, 0, 0, 0.7);
         }
         
         /* কভার ফটো সেকশন */
         .fb-cover-pic {
-            width: calc(100% + 50px);
-            margin-left: -25px;
-            height: 150px;
-            background: linear-gradient(to bottom, rgba(255,204,0,0.1), rgba(26, 38, 78, 1)), url('https://unsplash.com') center/cover no-repeat;
-            border-bottom: 2px solid #ffcc00;
-            margin-bottom: 0px; 
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(135deg, #ffcc00, #1e2d5a);
+            border-radius: 16px;
+            margin-bottom: 20px;
         }
 
         /* প্রোফাইল ছবি */
@@ -69,23 +59,18 @@
             object-fit: cover;
             border: 4px solid #ffcc00;
             box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            margin: -55px auto 15px auto;
+            margin: 0 auto 15px auto;
             display: block;
             background-color: #1a264e;
-            position: relative;
-            z-index: 5;
         }
         
         /* টাইটেল */
         h1 {
             font-size: 22px;
             color: #ffffff;
-            margin-top: 10px;
             margin-bottom: 6px;
             font-weight: 700;
             letter-spacing: 0.5px;
-            position: relative;
-            z-index: 6;
         }
         
         /* টাইপিং টেক্সট কন্টেইনার */
@@ -93,7 +78,7 @@
             font-size: 14px;
             color: #ffcc00;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             height: 20px;
@@ -106,18 +91,17 @@
             flex-wrap: wrap;
             gap: 12px;
             margin-bottom: 25px;
-            padding: 0 10px;
         }
         .social-icons a {
             color: #ffffff;
             background: rgba(255, 255, 255, 0.08);
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 18px; /* আইকনের সাইজ সামান্য বড় করা হয়েছে স্পষ্ট দেখার জন্য */
             text-decoration: none;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -126,7 +110,6 @@
             background: #ffcc00;
             color: #1a264e;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
         }
 
         /* স্কিল ব্যাজ */
@@ -157,7 +140,7 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* ইনফরমেশন বক্স */
+        /* ইনফরমেশন BOX */
         .info-box {
             text-align: left;
             margin-bottom: 25px;
@@ -173,7 +156,6 @@
             display: flex;
             align-items: flex-start;
             cursor: pointer;
-            position: relative;
         }
         .info-row:last-child {
             margin-bottom: 0;
@@ -186,10 +168,6 @@
         }
         .info-row span.val {
             color: #ffffff;
-            transition: color 0.2s ease;
-        }
-        .info-row:hover span.val {
-            color: #ffcc00;
         }
         
         /* কপি নোটিফিকেশন অ্যালার্ট */
@@ -228,7 +206,6 @@
         }
         .btn-fb:hover {
             background: #ffe066;
-            transform: translateY(-2px);
         }
         .btn-hire {
             background: transparent;
@@ -238,7 +215,6 @@
         .btn-hire:hover {
             background: #ffffff;
             color: #1a264e;
-            transform: translateY(-2px);
         }
         
         /* ভাসমান লাইভ হোয়াটসঅ্যাপ চ্যাট বাটন */
@@ -259,25 +235,12 @@
             font-size: 28px;
             z-index: 100;
             text-decoration: none;
-            transition: transform 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            color: #fff;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
     </style>
 </head>
 <body>
 
     <div class="main-wrapper">
-        <!-- প্রোফাইল কার্ড সেকশন -->
         <div class="card-container">
             <!-- কভার ফটো -->
             <div class="fb-cover-pic"></div>
@@ -295,7 +258,6 @@
 
             <!-- সোশ্যাল মিডিয়া লিঙ্ক সমূহ -->
             <div class="social-icons">
-                <!-- 🟢 ADDED: আইকন গ্রিডে ফেসবুক লিঙ্ক যুক্ত করা হয়েছে -->
                 <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.linkedin.com/in/mdsajedulislamselim/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://x.com/sisselim80" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
@@ -303,3 +265,27 @@
                 <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.pinterest.com/sisselim80/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
                 <a href="https://www.youtube.com/@MR_SELIM_SIS" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+                <a href="https://github.com/mdsajedulislamselim" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+
+            <!-- এক্সপার্ট স্কিল ট্যাগ সমূহ -->
+            <div class="skills-section">
+                <div class="skills-title">My Expertise</div>
+                <div class="skills-container">
+                    <span class="skill-badge">SEO</span>
+                    <span class="skill-badge">Facebook Ads</span>
+                    <span class="skill-badge">Google Ads</span>
+                    <span class="skill-badge">SMM</span>
+                    <span class="skill-badge">Lead Generation</span>
+                </div>
+            </div>
+            
+            <!-- ইনফরমেশন BOX -->
+            <div class="info-box">
+                <div class="info-row" onclick="copyToClipboard('+8801644924825', 'Phone Number copied!')">
+                    <strong>📞 Phone:</strong> 
+                    <span class="val">+8801644924825</span>
+                </div>
+                <div class="info-row" onclick="copyToClipboard('mdsajedulislamselim@gmail.com', 'Email Address copied!')">
+                    <strong>✉️ Email:</strong> 
