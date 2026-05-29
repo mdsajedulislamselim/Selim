@@ -15,18 +15,26 @@
             background: linear-gradient(135deg, #0f172a 0%, #1e2d5a 50%, #111827 100%);
             color: #ffffff;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            align-items: center; /* এটি সব কিছু স্ক্রিনের মাঝখানে রাখবে */
+            justify-content: flex-start;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
+        }
+        .main-wrapper {
+            max-width: 450px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* ভেতরে থাকা কার্ড ও গ্যালারি মাঝখানে রাখবে */
+            gap: 30px;
         }
         .card-container {
             background: #1a264e;
-            max-width: 430px;
             width: 100%;
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 3px solid #ffcc00; /* গোল্ডেন হলুদ বর্ডার */
+            border: 3px solid #ffcc00; 
             text-align: center;
             padding: 35px 25px;
             overflow: hidden;
@@ -116,36 +124,64 @@
             color: #1a264e;
             transform: translateY(-2px);
         }
+        /* ফেসবুক ছবির গ্যালারি সেকশন */
+        .facebook-gallery {
+            width: 100%;
+            background: rgba(26, 38, 78, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gallery-title {
+            font-size: 18px;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <div class="card-container">
-        <!-- আপনার পাঠানো আসল কার্ডের অনলাইন ইমেজ লিংকটি নিচে যুক্ত করা হয়েছে -->
-        <img src="https://imgbox.com" alt="MD SAJEDUL ISLAM SELIM" class="profile-card-img">
-        
-        <h1>MD SAJEDUL ISLAM SELIM</h1>
-        <div class="designation">Digital Marketing Expert</div>
-        
-        <div class="info-box">
-            <div class="info-row">
-                <strong>📞 Phone:</strong> 
-                <a href="tel:+8801644924825">+8801644924825</a>
+    <!-- মেইন কন্টেইনার যা সবকিছু মাঝখানে রাখবে -->
+    <div class="main-wrapper">
+
+        <!-- প্রোফাইল কার্ড -->
+        <div class="card-container">
+            <img src="https://imgbox.com" alt="MD SAJEDUL ISLAM SELIM" class="profile-card-img">
+            
+            <h1>MD SAJEDUL ISLAM SELIM</h1>
+            <div class="designation">Digital Marketing Expert</div>
+            
+            <div class="info-box">
+                <div class="info-row">
+                    <strong>📞 Phone:</strong> 
+                    <a href="tel:+8801644924825">+8801644924825</a>
+                </div>
+                <div class="info-row">
+                    <strong>✉️ Email:</strong> 
+                    <a href="mailto:mdsajedulislamselim@gmail.com">mdsajedulislamselim@gmail.com</a>
+                </div>
+                <div class="info-row">
+                    <strong>📍 Address:</strong> 
+                    <span>Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh</span>
+                </div>
             </div>
-            <div class="info-row">
-                <strong>✉️ Email:</strong> 
-                <a href="mailto:mdsajedulislamselim@gmail.com">mdsajedulislamselim@gmail.com</a>
-            </div>
-            <div class="info-row">
-                <strong>📍 Address:</strong> 
-                <span>Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh</span>
+            
+            <div class="btn-group">
+                <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
+                <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
             </div>
         </div>
-        
-        <div class="btn-group">
-            <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
-            <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
+
+        <!-- ফেসবুক ছবির গ্যালারি কন্টেইনার -->
+        <div class="facebook-gallery">
+            <div class="gallery-title">My Facebook Photos</div>
+            
+            <!-- 🔴 এলফসাইট (Elfsight) থেকে পাওয়া কোডটি নিচে এই লাইনের বদলে পেস্ট করতে পারেন -->
+            <p style="text-align:center; color:#cbd5e1; font-size:14px;">Connect Elfsight Widget here to show live photos.</p>
+            
         </div>
+
     </div>
 
 </body>
