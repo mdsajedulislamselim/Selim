@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selim | Personal Website</title>
+    <title>MD SAJEDUL ISLAM SELIM | Digital Marketing Expert</title>
     <style>
         * {
             margin: 0;
@@ -12,67 +12,149 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #1e2d5a; /* আপনার বিজনেস কার্ডের সুন্দর গাঢ় নীল ব্যাকগ্রাউন্ড */
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            padding: 20px;
         }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 400px;
+        .card-container {
+            background: #1a264e;
+            max-width: 450px;
             width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            overflow: hidden;
+            border: 4px solid #ffcc00; /* সোনালী হলুদ বর্ডার */
+            text-align: center;
+            padding: 40px 30px;
         }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            background: #007bff;
-            color: white;
-            font-size: 48px;
-            line-height: 120px;
-            border-radius: 50%;
+        .profile-img-container {
+            width: 150px;
+            height: 150px;
             margin: 0 auto 20px;
-            font-weight: bold;
+            border-radius: 50%;
+            border: 5px solid #ffcc00;
+            overflow: hidden;
+            background-color: #ffcc00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #222;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        p {
-            color: #666;
-            margin-bottom: 30px;
+        .designation {
             font-size: 16px;
+            color: #ffcc00; /* সোনালী হলুদ কালার */
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+        .info-section {
+            text-align: left;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .info-item {
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+        .info-item strong {
+            color: #ffcc00;
+            margin-right: 8px;
+            min-width: 80px;
+        }
+        .info-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .info-item a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+        .btn-container {
+            display: flex;
+            gap: 10px;
         }
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #007bff;
-            color: white;
+            flex: 1;
+            padding: 12px;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
+            font-size: 15px;
             transition: 0.3s;
+            text-align: center;
         }
-        .btn:hover {
-            background-color: #0056b3;
+        .btn-facebook {
+            background-color: #ffcc00;
+            color: #1e2d5a;
+        }
+        .btn-facebook:hover {
+            background-color: #e6b800;
+            transform: translateY(-2px);
+        }
+        .btn-email {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+        .btn-email:hover {
+            background-color: #ffffff;
+            color: #1e2d5a;
             transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile-img">S</div>
-        <h1>Welcome to Selim's Website</h1>
-        <p>Hi, I am Selim. Welcome to my personal corner of the internet. Stay tuned for exciting updates!</p>
-        <a href="mailto:selim80@.com" class="btn">Contact Me</a>
+    <div class="card-container">
+        <!-- প্রোফাইল ছবি সেকশন -->
+        <div class="profile-img-container">
+            <!-- আপনি যদি ছবি আপলোড করেন, তবে সেটির নাম এখানে দিতে হবে (যেমন: profil.png) -->
+            <img src="https://placeholder.com" alt="MD SAJEDUL ISLAM SELIM">
+        </div>
+        
+        <h1>MD SAJEDUL ISLAM SELIM</h1>
+        <div class="designation">Digital Marketing Expert</div>
+        
+        <!-- যোগাযোগের তথ্য -->
+        <div class="info-section">
+            <div class="info-item">
+                <strong>📞 Phone:</strong> <a href="tel:+8801644924825">+8801644924825</a>
+            </div>
+            <div class="info-item">
+                <strong>✉️ Email:</strong> <a href="mailto:mdsajedulislamselim@gmail.com">mdsajedulislamselim@gmail.com</a>
+            </div>
+            <div class="info-item">
+                <strong>📍 Address:</strong> Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh
+            </div>
+        </div>
+        
+        <!-- আপনার লাইভ ফেসবুক বাটন -->
+        <div class="btn-container">
+            <a href="https://facebook.com" target="_blank" class="btn btn-facebook">Facebook Profile</a>
+            <a href="mailto:mdsajedulislamselim@gmail.com" class="btn btn-email">Hire Me</a>
+        </div>
     </div>
+<img src="file:///D:/Horipur%20pic/Quick%20Share/LMC_20250608_183841_%F0%9F%8C%88Color%20Boost%20Pro%20By%20Expert%20Mistry.jpg" alt="MD SAJEDUL ISLAM SELIM">
 
 </body>
 </html>
