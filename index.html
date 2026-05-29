@@ -230,3 +230,31 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .button {
+            padding: 15px 30px;
+            background-color: green;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            /* ০.৩ সেকেন্ড ধরে স্মুথলি পরিবর্তন হবে */
+            transition: all 0.3s ease; 
+        }
+
+        /* মাউস নিলে যা ঘটবে */
+        .button:hover {
+            background-color: darkgreen;
+            transform: scale(1.1); /* সাইজ একটু বড় হবে */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="button">মাউস আনুন</button>
+
+</body>
+</html>
