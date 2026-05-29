@@ -23,6 +23,7 @@
             justify-content: flex-start;
             min-height: 100vh;
             padding: 40px 20px;
+            position: relative;
         }
         .main-wrapper {
             max-width: 450px;
@@ -32,18 +33,25 @@
             align-items: center; 
             gap: 25px;
         }
+        
+        /* কার্ডের চারপাশে অ্যানিমেটেড গ্লোয়িং ইফেক্ট */
         .card-container {
             background: #1a264e;
             width: 100%;
             border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.6);
             border: 3px solid #ffcc00; 
             text-align: center;
             padding: 0px 25px 35px 25px;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 204, 0, 0.4), 0 25px 50px rgba(0, 0, 0, 0.7);
         }
         
-        /* ফেসবুক স্টাইলের কভার ফটো সেকশন */
+        /* কভার ফটো সেকশন */
         .fb-cover-pic {
             width: calc(100% + 50px);
             margin-left: -25px;
@@ -53,7 +61,7 @@
             margin-bottom: -60px;
         }
 
-        /* ফেসবুক লাইভ প্রোফাইল ছবির সুন্দর গোল স্টাইল */
+        /* প্রোফাইল ছবি */
         .fb-profile-pic {
             width: 120px;
             height: 120px;
@@ -75,7 +83,7 @@
             letter-spacing: 0.5px;
         }
         
-        /* ডাইনামিক টাইপিং টেক্সটের স্টাইল */
+        /* টাইপিং টেক্সট */
         .designation-container {
             font-size: 14px;
             color: #ffcc00;
@@ -86,7 +94,7 @@
             height: 20px;
         }
         
-        /* সোশ্যাল আইকন গ্রিড স্টাইল */
+        /* সোশ্যাল আইকন */
         .social-icons {
             display: flex;
             justify-content: center;
@@ -116,7 +124,7 @@
             box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
         }
 
-        /* স্কিল ব্যাজ স্টাইল */
+        /* স্কিল ব্যাজ */
         .skills-section {
             margin-bottom: 25px;
             text-align: left;
@@ -144,6 +152,7 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
+        /* ইনফরমেশন বক্স */
         .info-box {
             text-align: left;
             margin-bottom: 25px;
@@ -158,23 +167,42 @@
             color: #cbd5e1;
             display: flex;
             align-items: flex-start;
+            cursor: pointer;
+            position: relative;
         }
         .info-row:last-child {
             margin-bottom: 0;
+            cursor: default;
         }
         .info-row strong {
             color: #ffcc00;
             width: 85px;
             flex-shrink: 0;
         }
-        .info-row a {
+        .info-row span.val {
             color: #ffffff;
-            text-decoration: none;
+            transition: color 0.2s ease;
         }
-        .info-row a:hover {
+        .info-row:hover span.val {
             color: #ffcc00;
-            text-decoration: underline;
         }
+        
+        /* কপি করার পর ছোট নোটিফিকেশন অ্যালার্ট */
+        .copy-toast {
+            position: fixed;
+            bottom: 30px;
+            background: #ffcc00;
+            color: #1a264e;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 999;
+            animation: fadeInUp 0.3s ease;
+        }
+
         .btn-group {
             display: flex;
             gap: 12px;
@@ -208,7 +236,33 @@
             transform: translateY(-2px);
         }
         
-        /* স্ক্রোল অ্যানিমেশন CSS */
+        /* ভাসমান লাইভ হোয়াটসঅ্যাপ চ্যাট বাটন */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            width: 55px;
+            height: 55px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            z-index: 100;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        /* অ্যানিমেশন ট্র্যাকিং ইফেক্ট */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
@@ -218,15 +272,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
     </style>
 </head>
 <body>
 
     <div class="main-wrapper">
-
         <!-- প্রোফাইল কার্ড সেকশন -->
         <div class="card-container fade-up">
-            
             <!-- কভার ফটো -->
             <div class="fb-cover-pic"></div>
             
@@ -235,7 +297,7 @@
             
             <h1>MD SAJEDUL ISLAM SELIM</h1>
             
-            <!-- টাইপিং অ্যানিমেশনের জায়গা -->
+            <!-- টাইপিং অ্যানিমেশন -->
             <div class="designation-container">
                 <span id="typing-text"></span>
             </div>
@@ -247,45 +309,3 @@
                 <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.pinterest.com/sisselim80/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <a href="https://www.youtube.com/@MR_SELIM_SIS" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                <a href="https://spotify.com" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
-                <a href="https://github.com/mdsajedulislamselim" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-
-            <!-- এক্সপার্ট স্কিল ট্যাগ সমূহ -->
-            <div class="skills-section">
-                <div class="skills-title">My Expertise</div>
-                <div class="skills-container">
-                    <span class="skill-badge">SEO</span>
-                    <span class="skill-badge">Facebook Ads</span>
-                    <span class="skill-badge">Google Ads</span>
-                    <span class="skill-badge">SMM</span>
-                    <span class="skill-badge">Lead Generation</span>
-                </div>
-            </div>
-            
-            <!-- ইনফরমেশন বক্স -->
-            <div class="info-box">
-                <div class="info-row">
-                    <strong>📞 Phone:</strong> 
-                    <a href="tel:+8801644924825">+8801644924825</a>
-                </div>
-                <div class="info-row">
-                    <strong>✉️ Email:</strong> 
-                    <a href="mailto:mdsajedulislamselim@gmail.com">mdsajedulislamselim@gmail.com</a>
-                </div>
-                <div class="info-row">
-                    <strong>📍 Address:</strong> 
-                    <span>Jamdani, Dhaperhat, Pirgonj, Rangpur, Bangladesh</span>
-                </div>
-            </div>
-            
-            <!-- মেইন অ্যাকশন বাটন -->
-            <div class="btn-group">
-                <a href="https://facebook.com" target="_blank" class="action-btn btn-fb">Facebook Profile</a>
-                <a href="mailto:mdsajedulislamselim@gmail.com" class="action-btn btn-hire">Hire Me</a>
-            </div>
-        </div>
-
-    </div>
-
