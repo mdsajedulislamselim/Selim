@@ -34,7 +34,7 @@
             gap: 25px;
         }
         
-        /* কার্ডের চারপাশে অ্যানিমেটেড গ্লোয়িং ইফেক্ট */
+        /* কার্ডের চারপাশের গ্লোয়িং এবং এন্ট্রি অ্যানিমেশন */
         .card-container {
             background: #1a264e;
             width: 100%;
@@ -45,6 +45,9 @@
             padding: 0px 25px 35px 25px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            /* পেজ ওপেন হওয়া মাত্রই নিচ থেকে ওপরে ওঠার ইনস্ট্যান্ট অ্যানিমেশন */
+            animation: cardFadeUp 1s ease-out forwards;
         }
         .card-container:hover {
             transform: translateY(-5px);
@@ -187,7 +190,7 @@
             color: #ffcc00;
         }
         
-        /* কপি করার পর ছোট নোটিফিকেশন অ্যালার্ট */
+        /* কপি নোটিফিকেশন অ্যালার্ট */
         .copy-toast {
             position: fixed;
             bottom: 30px;
@@ -200,7 +203,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             display: none;
             z-index: 999;
-            animation: fadeInUp 0.3s ease;
         }
 
         .btn-group {
@@ -262,20 +264,16 @@
             color: #fff;
         }
 
-        /* অ্যানিমেশন ট্র্যাকিং ইফেক্ট */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-up.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* কার্ডের ইন্ট্রো অ্যানিমেশন কী-ফ্রেম */
+        @keyframes cardFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
@@ -287,8 +285,8 @@
 <body>
 
     <div class="main-wrapper">
-        <!-- প্রোফাইলカード সেকশন -->
-        <div class="card-container fade-up">
+        <!-- প্রোফাইল কার্ড সেকশন -->
+        <div class="card-container">
             <!-- কভার ফটো -->
             <div class="fb-cover-pic"></div>
             
@@ -309,3 +307,4 @@
                 <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.pinterest.com/sisselim80/" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/@MR_SELIM_SIS" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
