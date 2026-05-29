@@ -201,6 +201,32 @@
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-3a5917bc-f6b5-43f6-9c2a-4909c67c19ce" data-elfsight-app-lazy></div>
 <!-- Elfsight Banner | Untitled Banner -->
-<marquee behavior="scroll" direction="left" scrollamount="10">
-    Aii text-ti bame scroll hobe।
-</marquee>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>সহজ অ্যানিমেশন</title>
+    <style>
+        /* অ্যানিমেশন তৈরি করা */
+        @keyframes bameডানে {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(200px); background-color: blue; }
+            100% { transform: translateX(0); }
+        }
+
+        /* বক্সের ডিজাইন এবং অ্যানিমেশন যুক্ত করা */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* ৩ সেকেন্ড পর পর অনবরত (infinite) অ্যানিমেশন চলবে */
+            animation: bameডানে 3s infinite; 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>HTML ও CSS অ্যানিমেশন</h2>
+    <div class="box"></div>
+
+</body>
+</html>
