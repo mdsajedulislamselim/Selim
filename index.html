@@ -258,3 +258,79 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>স্ক্রোল অ্যানিমেশন উদাহরণ</title>
+    
+    <!-- ১. AOS লাইব্রেরির CSS লিংক -->
+    <link rel="stylesheet" href="https://unpkg.com" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .spacer {
+            height: 800px; /* পেজ স্ক্রোল করার জায়গা তৈরির জন্য অতিরিক্ত হাইট */
+            background: linear-gradient(#e0e0e0, #bcbcbc);
+            padding-top: 50px;
+        }
+        .box {
+            width: 250px;
+            height: 150px;
+            background-color: #3498db;
+            color: white;
+            line-height: 150px;
+            font-size: 20px;
+            margin: 100px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="spacer">
+        <h2>নিচের দিকে স্ক্রোল করুন অ্যানিমেশন দেখার জন্য 👇</h2>
+    </div>
+
+    <!-- ২. বিভিন্ন ধরনের স্ক্রোল অ্যানিমেশন এলিমেন্ট -->
+    <div class="box" data-aos="fade-up">
+        উপরের দিকে ভেসে উঠবে
+    </div>
+
+    <div class="box" data-aos="fade-left" style="background-color: #e74c3c;">
+        বাম দিক থেকে আসবে
+    </div>
+
+    <div class="box" data-aos="zoom-in" style="background-color: #2ecc71;">
+        জুম হয়ে সামনে আসবে
+    </div>
+
+    <div class="box" data-aos="flip-left" style="background-color: #f1c40f;">
+        ঘুরে ঘুরে আসবে (Flip)
+    </div>
+
+    <div class="spacer">
+        <h3>অ্যানিমেশন শেষ!</h3>
+    </div>
+
+    <!-- ৩. AOS লাইব্রেরির JavaScript লিংক -->
+    <script src="https://unpkg.com"></script>
+    
+    <!-- ৪. AOS অ্যাক্টিভেট করার কোড -->
+    <script>
+        AOS.init({
+            duration: 1000, // অ্যানিমেশনটি ১ সেকেন্ড (১০০০ মিলিসেকেন্ড) ধরে চলবে
+            once: false     // true দিলে শুধু প্রথমবার স্ক্রোলে অ্যানিমেশন হবে, false দিলে যতবার স্ক্রোল করবেন ততবার হবে
+        });
+    </script>
+
+</body>
+</html>
